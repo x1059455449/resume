@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/getInfo" method="get>
+       
+        <div class="username">
+            <label for="username ">姓名</label>
+            <input id="username" type="username" name="username" placeholder="用户名" >
+        </div>
+
+        <div class="password">
+            <label for="password">密码</label>
+            <input id="password" type="password" name="password">
+        </div>
+
+        <div class="sex">
+            <label for="sex">性别</label>
+            <input type="radio" name="sex" value="男"> 男
+            <input type="radio" name="sex" value="女"> 女
+        </div>
+
+        <div class="quxiang">
+            <label for="quxiang ">取向</label>
+            <input type="radio" name="quxiang" value="男"> 男
+            <input type="radio" name="quxiang" value="女"> 女
+            <input type="radio" name="quxiang" value="不公开"> 不公开
+        </div>
+
+        <div class="hobby">
+            <label for="hobby">爱好</label>
+            <input type="checkbox" name="hobby" value="dota"> dota
+            <input type="checkbox" name="hobby" value="tourist"> 旅游
+            <input type="checkbox" name="hobby" value=" pet"> 宠物    
+        </div>
+        
+        <div class="comitte">
+            <label for="comitte">评论</label>
+        </div>
+
+        <div class="textarea">
+            <div class="textarea">
+                <textarea name="textarea" id="textarea" cols="60" rows="20"></textarea>
+            </div>
+        </div>
+
+        <div class="select">
+            <label for="car">我的car</label>
+            <select name="car" >
+                <option value="sabo" selected>萨博</option>
+                <option value="lanbojini">兰博基尼</option>
+                <option value="dongfengrichan">东风日产</option>
+            </select>
+            <button>提交</button>
+        </div>
+
+        
+    </form>
+    
+</body>
+</html>

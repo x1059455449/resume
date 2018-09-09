@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .layout{
+            width: 60px;
+            margin: 30px auto;
+        }
+
+        .layout>div{
+            margin: 30px auto;
+        }
+
+        .triangle{
+            width: 0px;
+            height: 0px;
+            border-top: 30px solid blue;
+            border-right: 30px solid yellow;
+            border-bottom: 30px solid green;
+            border-left: 30px solid red; 
+        }
+
+        .triangle.s-1{
+            width: 0px;
+            height: 0px;
+            border-top: 30px solid blue;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 30px solid transparent; 
+        }
+        
+        .triangle.s-2{
+            width: 0px;
+            height: 0px;
+            border-top: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid transparent;
+            border-left: 30px solid red; 
+        }
+        .triangle.s-3{
+            width: 0px;
+            height: 0px;
+            border-top: 30px solid transparent;
+            border-right: 30px solid yellow;
+            border-bottom: 30px solid transparent;
+            border-left: 30px solid transparent; 
+        }
+
+        .triangle.s-4{
+            width: 0px;
+            height: 0px;
+            border-top: 30px solid transparent;
+            border-right: 30px solid transparent;
+            border-bottom: 30px solid red;
+            border-left: 30px solid red; 
+        }
+
+        .triangle.s-5{
+            width: 0px;
+            height: 0px;
+            border-top: 30px solid transparent;
+            border-right: 30px solid green;
+            border-bottom: 30px solid green;
+            border-left: 30px solid transparent; 
+        }
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="triangle"></div>
+        <div class="triangle s-1"></div>
+        <div class="triangle s-2"></div>
+        <div class="triangle s-3"></div>
+        <div class="triangle s-4"></div>
+        <div class="triangle s-5"></div>
+    </div>
+   
+</body>
+</html>

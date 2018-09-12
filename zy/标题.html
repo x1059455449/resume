@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+    body{
+        font-family: Arial;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        color: #333;
+        text-decoration: none;
+        padding: 10px 20px;
+        /* background: yellow; */
+        display: block;
+        min-width: 40px;
+      
+    }
+
+    nav>ul>li{
+        float: left;
+    }
+
+    nav::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    nav .children{
+        position: absolute;
+        top: 50;/*top:0显示重叠正常，但是100%的时候不正常*/
+        box-shadow: 0 2px 4px 1px rgba(0,0,0,0.3);
+        
+        display: none;
+    }
+
+    nav>ul>li:hover .children{
+        display: block;
+    }
+
+
+
+    nav a:hover{
+        color: aliceblue;
+        background: rgba(0,0,0,0.3);
+    }
+
+    nav{
+        width: 600px;
+        margin: 0 auto;
+        box-shadow: 0 2px 4px 1px rgba(0,0,0,0.3)
+    }
+
+    
+
+
+    </style>
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">首页</a>
+                <ul class="children">
+                        <li><a href="#">知乎</a></li>
+                        <li><a href="#">导航</a></li>
+                        <li><a href="#">GITHUB</a></li>
+                    </ul>
+            </li>
+            <li><a href="#">作品</a>
+                <ul class="children">
+                        <li><a href="#">简历</a></li>
+                        <li><a href="#">VUE</a></li>
+                        <li><a href="#">GITHUB项目</a></li>
+                    </ul></li>
+            <li>
+                <a href="#">更多</a>
+                <ul class="children">
+                    <li><a href="#">知乎</a></li>
+                    <li><a href="#">博客</a></li>
+                    <li><a href="#">GITHUB</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>

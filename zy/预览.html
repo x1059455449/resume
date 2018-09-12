@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+    .layout{
+        width: 600px;
+        margin: 0 auto;
+        /* border: 1px solid; */
+    }
+
+    .layout>div{
+        margin-top: 30px;
+    }
+    
+    .em{
+        color: #ffffff;/*此处写background-color下面会不起作用，因为em的权重比下面的高*/
+        padding: 1px 16px;
+        line-height: 1.5;
+        border-radius: 3px;
+        /* text-decoration: none;??????? */
+    }
+
+    .em .close{
+        text-decoration: none;
+        color: inherit;
+        font-size: 24px;
+        font-weight: bold;
+        float:right;
+        cursor: pointer;/*指针help wait*/
+    }
+
+    .em h3{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 10px 0;/*缩小一点*/
+    }
+
+    .em p{
+        font-size: 20px;
+        /* border: 1px solid; */
+    }
+
+    .em.congratuations{
+        background-color: #4CAF50;
+    }
+
+    .em.inform{
+        background-color: #2196F3;
+    }
+
+    .em.mygod{
+        background-color: #f44336;
+    }
+
+    .em.warning{
+        background-color: #ff9800;
+    }
+
+    .em .text{
+        text-decoration: none;
+    }
+
+    .em .text:hover{
+        color: black;
+        background: rgba(0,0,0,0.3);
+    }/*鼠标放上去的空格，只要字能点*/
+
+    .em .text:active{
+        color:red;
+        background: rgba(0,0,0,0.3);
+    }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <div class="em congratuations">
+            <span class="close">×</span>
+            <h3><a href="#" class="text">恭喜你</a></h3>
+            <p>获得本周学霸，就加油吧</p>
+        </div>
+
+        <div class="em inform">
+                <span class="close">×</span>
+                <h3>通知</h3>
+                <p>晚上上课，不要忘了</p>
+        </div>
+
+        <div class="em mygod">
+                <span class="close">×</span>
+                <h3>天啊</h3>
+                <p>竟然几天没做任务</p>
+        </div>
+
+        <div class="em warning">
+                <span class="close">×</span>
+                <h3>警告</h3>
+                <p>学如逆水行舟，不进则退</p>
+        </div>
+    </div>
+</body>
+</html>

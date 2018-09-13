@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    .left{
+        width:200px;
+        height: 400px;
+        background: red;
+        float:left;
+    }
+
+    .ri{
+        margin-left: 210px;
+        height: 500px;
+        background:blue;
+    }
+
+    .content::after{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .footer{
+        background: yellow;
+    }
+
+    
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="left">
+            <p>wozaizuoce,guding 200px</p>
+        </div>
+        <div class="ri">
+            <p>wozaiyoubian haishi zishiying</p>
+        </div>
+    </div>
+    <div class="footer">woshifooter</div>
+</body>
+</html>

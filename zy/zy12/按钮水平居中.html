@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+    
+    *{
+        margin: 0;
+        padding: 0;
+    }
+
+    body{
+        font-family: Arial;
+    }
+
+    ul{
+        list-style: none;
+    }
+
+    a{
+        color: #fff;
+        background: red;
+        text-decoration: none;
+        text-align: center;
+        padding: 10px 20px;
+        /* min-width: 40px; */
+        display: block;
+        border: 1px solid ;
+    }
+
+    nav>ul>li{
+        float: left;
+        /* position: relative; */
+        padding: 40px 0;
+        /* vertical-align: middle; */
+       
+    }
+
+    nav::after{
+        content:'';
+        display:block;
+        clear: both;
+    }
+
+    .blank >ul{
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        }
+
+    a:hover{
+        background: yellow;
+        opacity: 0.5;
+    }
+
+
+
+    nav{
+        width: 600px;
+        height: 100px;
+        border:1px  solid grey;
+        margin: 0 auto;
+    }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <ul class="blank">
+            <li><a href="#">按钮1</a></li>
+            <li><a href="#">按钮2</a></li>
+            <li><a href="#">按钮3</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <style>
+
+    .content{
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .left{
+        width:200px;
+        height: 400px;
+        background: yellow;
+        float: left;
+    }
+
+    .right{
+        width:200px;
+        height: 450px;
+        background: blue;
+        float: right;
+    }
+
+    .middle{
+        margin-left: 210px;/*这里要写margin-left，margin-right，因为是两边浮动<渲染顺序为laft,right,middle-->*/
+        margin-right: 210px;
+        height: 500px;
+        background: red;
+    }
+
+    .footer{
+        background: grey;
+    }
+
+    </style>
+
+</head>
+<body>
+    <div class="content"> 
+        <div class="left">我在左边200px</div>
+        <div class="right">我在右边200px</div>
+        <div class="middle">我在中间宽度自适应</div>
+    </div>
+    <div class="footer">我是酱油</div>
+</body>
+</html>

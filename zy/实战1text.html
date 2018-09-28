@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>shizhantext</title>
+    <link rel="stylesheet" href="http://at.alicdn.com/t/font_854423_dhi0p5gw13.css">
+    <style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    /*commom css*/
+    .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .button {
+        font-size: 18px;
+        color: #fff;
+        background-color: #f7ba3e;
+        padding: 5px 10px;
+        display: inline-block;
+        border-radius: 4px;
+        opacity: 0.8;
+    }
+
+    .button:hover {
+        opacity: 1;
+    }
+
+    body {
+        font:14px/1.5 Arial;
+        background-color: #eee;
+        color: #444;
+    }
+
+    .layout {
+        width:1000px;
+        margin: 0 auto;
+    }
+
+    html,dody {
+        height: 100%;
+    }
+
+    header {
+        height: 100%;
+        min-height: 600px;
+        background: #000 url(http://www.alettertomydog.com/wp-content/uploads/jiff02.jpg) 
+        center center no-repeat;
+        background-size: cover;
+        position: relative;
+    }
+
+    /*zhezhao*//*width:100%;height:100%; */
+    /* header::before {
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: rgba(255,255,255,0.1);
+    } */
+
+    header .logo {
+        color:#f7ba3e;
+        font-size: 32px;
+        float: left;
+        margin-top: 10px;
+    }
+
+    header .nav {
+        float: right;
+    }
+
+    header .nav > li {
+        float: left;
+        margin: 10px;
+    }
+
+    header .nav a {
+        display: block;
+        padding: 5px;
+        color: #fff;
+        font-size: 16px;
+        border-radius:  4px;
+    }
+
+    header .nav a:hover {
+        background: #f7ba3e;
+    }
+
+    header .head-intro {
+        color: #fff;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+    }
+
+    header .head-intro h1 {
+        font-size: 35px;
+    }
+
+    header .head-intro h2 {
+        font-size: 40px;
+        margin-top: 20px;
+    }
+
+    header .head-intro .button {
+        margin-top: 20px;
+    }
+
+    section {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    section > h2 {
+        font-size: 42px;
+    }
+
+    section > p {
+        margin-top: 10px;
+    }
+
+    section .introduction>li {
+        float: left;
+        width:33.33%;
+        padding: 10px 20px;
+    }
+
+    section>ul .iconfont {
+        font-size: 60px;
+    }
+
+    section>ul p {
+        margin-top: 10px;
+    }
+
+    section .list figure {
+        width: calc(33.33% - 20px);
+        margin: 10px;
+        /* height: 200px; */
+        float: left;
+    }
+
+    section .list img {
+        width: 100%;
+        height: 100%;
+    }
+
+    section .list a {
+        display: block;
+        height: 150px;
+    }
+
+    section .list figcaption {
+        font-size: 18px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    section .list p {
+        color:#666;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    section .relist dl {
+        margin-right: 120px;
+    }
+
+    section .relist img {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        border: 3px solid lightblue;
+        float: right;
+    }
+
+    section .relist>li:nth-child(odd) {
+        margin-top: 20px;
+        padding-right: calc(50% - 50px);
+        text-align: right;
+    }
+
+    section .relist>li::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    section .relist>li:nth-child(odd) img {
+        float: right;
+    }
+
+    section .relist>li:nth-child(even) img {
+        float: right;
+    }
+
+    section .relist>li:nth-child(even) {
+        padding-right: calc(50% - 50px);
+        text-align: right;
+        color: red;
+    }
+
+    section .relist>li:nth-child(even) dl {
+        margin-left: 440px;
+        padding-left: calc(50% - 50px);
+        text-align: left;
+    }
+    section .relist>li:nth-child(odd) dl {
+        margin-right: 120px;
+    }
+
+
+
+
+    section .s4 {
+        display: flex;
+        justify-content: space-around;
+       
+        margin-bottom: 50px;
+        margin-top: 50px;
+    }
+    .s2{
+        width: 100%;
+        height: 100%;
+        border: 1px solid red;
+        background: #eee;
+    }
+
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <div class="navbar layout clearfix">
+            <a href="" class="logo">52156415</a>
+            <ul class="nav ">
+                <li><a href="#">logo1</a></li>
+                <li><a href="#">logo1</a></li>
+                <li><a href="#">logo1</a></li>
+                <li><a href="#">logo1</a></li>
+                <li><a href="#">logo1</a></li>
+            </ul>
+        </div>
+       
+        <div class="head-intro layout">
+            <h1>3454564654646</h1>
+            <h2>545641654654656</h2>
+            <a href="" class="button">5465461231</a>
+        </div>
+    </header>
+
+    <main>
+        <section>
+            <h2>44545</h2>
+            <p>8784564564654</p>
+            <ul class="introduction clearfix"> 
+                <li><span class="iconfont icon-1111"></span>
+                <h3>211111</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. MinLorem ipsum dolor sit amet, consectetur adipisicing elit. Min</p>
+                </li>
+                <li><span class="iconfont icon-2222"></span>
+                <h3>611111</h3>
+                <p>ima maxime quam architecto quo inventore harum ex magni,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Min</p>
+                </li>
+                <li><span class="iconfont icon-3333"></span>
+                <h3>811111</h3>
+                <p>ima maxime quam architecto quo inventore harum ex magni,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Min</p>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>44545</h2>
+            <p>84654564</p>
+            <div class="list clearfix">
+                
+                    <figure>
+                        <a href=""><img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt=""></a>
+                        <figcaption>5454652</figcaption>
+                        <p>5456456</p>
+                    </figure>
+               
+                    <figure>
+                        <a href=""><img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt=""></a>
+                        <figcaption>5454652</figcaption>
+                        <p>5456456</p>
+                    </figure>
+                              
+                    <figure>
+                        <a href=""><img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt=""></a>
+                        <figcaption>5454652</figcaption>
+                        <p>5456456</p>
+                    </figure>
+                           
+                    <figure>
+                        <a href=""><img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt=""></a>
+                        <figcaption>5454652</figcaption>
+                        <p>5456456</p>
+                    </figure>
+                                
+                    <figure>
+                        <a href=""><img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt=""></a>
+                        <figcaption>5454652</figcaption>
+                        <p>5456456</p>
+                    </figure>
+                
+                    <figure>
+                        <a href=""><img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt=""></a>
+                        <figcaption>5454652</figcaption>
+                        <p>5456456</p>
+                    </figure>
+                
+                </div>
+        </section>
+        <section>
+            <h2>44545</h2>
+            <p>222</p>
+            <ul class="relist">
+                <li>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt="">
+                    <!-- <div class="detail">
+                        <h3>33</h3>
+                        <h4>5456</h4>
+                        <p>ima maxime quam architecto quo inventore harum ex magni,Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Min
+                        
+                        </p>
+                    </div> -->
+                   <dl>
+                       <dt>555</dt>
+                       <dd>222</dd>
+                       <dd>545454212313284654454564567897454878/978798798746545678965139</dd>
+                   </dl>
+                </li>
+
+               <li>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt="">
+                    <dl>
+                        <dt>555</dt>
+                        <dd>222</dd>
+                        <dd>545454212313284654454564567897454878/978798798746545678965139</dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt="">
+                    <dl>
+                        <dt>555</dt>
+                        <dd>222</dd>
+                        <dd>545454212313284654454564567897454878/978798798746545678965139</dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt="">
+                    <dl>
+                        <dt>555</dt>
+                        <dd>222</dd>
+                        <dd>545454212313284654454564567897454878/978798798746545678965139</dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt="">
+                    <dl>
+                        <dt>555</dt>
+                        <dd>222</dd>
+                        <dd>545454212313284654454564567897454878/978798798746545678965139</dd>
+                    </dl>
+                </li>
+
+                <li>
+                    <img src="https://tse4.mm.bing.net/th?id=OIP.QLob0sYXiRt_C6nppr87wQHaEK&pid=Api" alt="">
+                    <dl>
+                        <dt>555</dt>
+                        <dd>222</dd>
+                        <dd>545454212313284654454564567897454878/978798798746545678965139</dd>
+                    </dl>
+                </li>
+
+            </ul>
+        </section>
+        <section>
+           <div class="s2">
+            <ul class="s4">
+                <li><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg"
+                            alt=""></a></li>
+                <li><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg"
+                            alt=""></a></li>
+                <li><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg"
+                            alt=""></a></li>
+                <li><a href="#"><img src="http://book.jirengu.com/jirengu-inc/jrg-tehui/homework/%E8%8B%A5%E6%84%9A/16/img/logos/envato.jpg"
+                            alt=""></a></li>
+            </ul>
+           </div>       
+        </section>
+    </main>
+
+    <footer>
+        <p>footer</p>
+    </footer>
+</body>
+</html>

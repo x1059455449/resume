@@ -85,6 +85,7 @@
         background: rgba(0,0,0,0.3);
         transition: all 0.6s;
         opacity: 0;
+        display: none;
     }   
 
     .cover .btn {
@@ -92,7 +93,7 @@
         margin-top: 60%;
         left: 50%;
         transform: translate(-50%,-50%);
-        text-align: center;
+        text-align: center;  
     }
 
     .prod.hover .cover {
@@ -180,6 +181,8 @@
         }
         return result;
     }
+
+    //$('.prod').removeClass('.cover')
 
     $('.btn-add').on('click', function (e) {
         e.preventDefault();

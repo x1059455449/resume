@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
+    <title>效果切换3(代理)</title>
+    <style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body,ul,li,p {
+        margin: 0;
+        padding: 0;
+    }
+
+    ol,ul {
+        list-style: none;
+    }
+
+    body {
+        font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+        color: aqua;
+    }
+
+    a {
+        color: teal;
+        text-decoration: none;
+    }
+
+    .clearfix::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1;
+    }
+
+    .layout {
+        width: 720px;
+        margin: 10px auto;
+    }
+
+    .btn {
+        display: inline-block;
+        border: 1px solid #8844ee;
+        padding: 10px 15px;
+        margin-top: 20px;
+        margin-right: 20px;
+        border-radius: 5px;
+        text-align: center;
+        background: #fff;
+        cursor: pointer;
+    }
+
+    .prod {
+        position: relative;
+        float: left;
+        width: 226px;
+        padding: 10px 20px;
+        margin-left: 20px;
+        margin-top: 20px;
+        text-align: center;
+        border: 1px solid #eee;
+        background: #fff;
+    }
+
+    .prod img {
+        /* width: 100%;
+        height: 100%; */
+        width: 200px;
+        height: 200px;
+    }
+
+    .cover {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.3);
+        transition: all 0.6s;
+        opacity: 0;
+    }   
+
+    .cover .btn {
+        position: absolute;
+        margin-top: 60%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        text-align: center;
+    }
+
+    .prod.hover .cover {
+        opacity: 0.5;
+    }
+
+    .prod-ct {
+        margin-left: -22px;
+        margin-top: -22px;
+    }
+
+    .prod-name {
+        height: 36px;
+        text-align: center;
+        font-weight: normal;
+        font-size: 12px;
+        color:#666;
+    }
+
+    .prod-price {
+        text-align: center;
+        color: aquamarine;
+    }
+
+
+    </style>
+</head>
+<body>
+    <div class="layout">
+        <h1>水果列表</h1>
+        <ul class="prod-ct clearfix">
+            <li class="prod">
+                <div class="cover"><a class="btn action-delete" href="">删除</a></div>
+                <a href="">
+                    <img src="http://pic13.nipic.com/20110425/2457331_002517735000_2.jpg" alt="">
+                    <div class="prod-name">苹果</div>
+                    <div class="prod-price">￥16.00/kg</div>
+                </a>
+            </li>
+            <li class="prod">
+                <div class="cover"><a class="btn action-delete" href="">删除</a></div>
+                <a href="">
+                    <img src="http://pic13.nipic.com/20110426/2457331_003411657000_2.jpg" alt="">
+                    <div class="prod-name">chengzi</div>
+                    <div class="prod-price">￥160.00/kg</div>
+                </a>
+            </li>
+            <li class="prod">
+                <div class="cover"><a class="btn action-delete" href="">删除</a></div>
+                <a href="">
+                    <img src="http://pic3.nipic.com/20090522/2567835_224007085_2.jpg" alt="">
+                    <div class="prod-name">xiangjiao</div>
+                    <div class="prod-price">￥168.00/kg</div>
+                </a>
+            </li>
+        </ul>
+        <a class="btn btn-add" href="">添加</a>
+        <a class="btn btn-edit" href="">编辑</a>
+    </div>
+
+    <script>
+    function getProdHtml(prod) {
+        var html = '';
+        html += '<li class="prod">';
+        html += '<div class="cover"><a class="btn action-delete" href="#">删除</a></div>'
+        html += '<a href="#">'
+        html += '<img src="' + prod.img + '" alt="">'
+        html += '<div class="prod-name">' + prod.name + '</div>'
+        html += '<div class="prod-price">' + prod.price + '</div>'
+        html += '</a>'
+        html += '</li>';
+        return html;
+    }
+
+    function getData() {
+        var result = []
+        for(var i =0;i<3;i++){
+            var rand = Math.floor(Math.random()*100)
+            var product = {
+                img:'https://picsum.photos/200/200/?image=1' + rand,
+                name:'fruits',
+                price:'￥' + rand + '.00' +'/kg'
+            }
+            result.push(product)
+        }
+        return result;
+    }
+
+    $('.btn-add').on('click', function (e) {
+        e.preventDefault();
+        $('.prod').removeClass('hover')
+        var products = getData()
+        $.each(products, function (idx, prod) {
+            var html = getProdHtml(prod)
+            $('.prod-ct').append(html)
+        })
+    })
+
+    $('.btn-edit').on('click',function (params) {
+        params.preventDefault();
+        $('.prod').toggleClass('hover')
+    })
+
+    $('.prod-ct').on('click','.action-delete',function(params){
+        params.preventDefault();
+        $(this).parents('.prod').remove()
+    }) 
+    //如果出现点击按钮页面刷新，需要对a 链接做绑定事件处理，比如< a href="javascript:void(0)"></a>或者使用阻止默认事件
+    </script>
+
+
+</body>
+</html>

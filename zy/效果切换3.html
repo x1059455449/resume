@@ -93,7 +93,7 @@
         margin-top: 60%;
         left: 50%;
         transform: translate(-50%,-50%);
-        text-align: center;  
+        text-align: center; 
     }
 
     .prod.hover .cover {
@@ -126,7 +126,7 @@
         <h1>水果列表</h1>
         <ul class="prod-ct clearfix">
             <li class="prod">
-                <div class="cover"><a class="btn action-delete" href="javascript:void(0);"onclick="js_method()" target="_blank" rel="noopener">删除</a></div>
+                <div class="cover"><a class="btn action-delete" href="javascript:void(0);" target="_blank">删除</a></div>
                 <a href="http://pic13.nipic.com/20110425/2457331_002517735000_2.jpg">
                     <img src="http://pic13.nipic.com/20110425/2457331_002517735000_2.jpg" alt="">
                     <div class="prod-name">苹果</div>
@@ -182,7 +182,7 @@
         return result;
     }
 
-    //$('.prod').removeClass('.cover')
+    var isEdit =false
 
     $('.btn-add').on('click', function (e) {
         e.preventDefault();
@@ -195,13 +195,19 @@
     })
 
     $('.btn-edit').on('click',function (params) {
+        //var _this = this
+        // $('.cover').isEdit = true//赋值不成功
+        // console.log($('.cover').isEdit );
+        $('.cover').show()
         params.preventDefault();
         $('.prod').toggleClass('hover')
+        isEdit = false
+        
     })
 
     $('.prod-ct').on('click','.action-delete',function(params){
         params.preventDefault();
-        $(this).parents('.prod').remove()
+        $(this).parents('.prod').remove()  
     }) 
     //如果出现点击按钮页面刷新，需要对a 链接做绑定事件处理，比如< a href="javascript:void(0)"></a>或者使用阻止默认事件
     </script>

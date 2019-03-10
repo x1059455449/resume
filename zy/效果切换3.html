@@ -159,7 +159,7 @@
         var html = '';
         html += '<li class="prod">';
         html += '<div class="cover"><a class="btn action-delete" href="#">删除</a></div>'
-        html += '<a href="#">'
+        html += '<a href="' + prod.img + '">'
         html += '<img src="' + prod.img + '" alt="">'
         html += '<div class="prod-name">' + prod.name + '</div>'
         html += '<div class="prod-price">' + prod.price + '</div>'
@@ -173,8 +173,9 @@
         for(var i =0;i<3;i++){
             var rand = Math.floor(Math.random()*100)
             var product = {
-                img:'https://picsum.photos/200/200/?image=1' + rand,
-                name:'fruits',
+                //href: 'https://picsum.photos/200/200/?image=1' + rand,
+                img:'https://picsum.photos/200/200/?image=' + rand,
+                name:rand,
                 price:'￥' + rand + '.00' +'/kg'
             }
             result.push(product)
@@ -195,14 +196,13 @@
     })
 
     $('.btn-edit').on('click',function (params) {
-        //var _this = this
-        // $('.cover').isEdit = true//赋值不成功
-        // console.log($('.cover').isEdit );
-        $('.cover').show()
+        //isEdit = !isEdit 
+        //$('.cover').show()  
+        $('.cover').toggle()
         params.preventDefault();
         $('.prod').toggleClass('hover')
-        isEdit = false
-        
+        //toggle('cover')
+        //isEdit = false
     })
 
     $('.prod-ct').on('click','.action-delete',function(params){
